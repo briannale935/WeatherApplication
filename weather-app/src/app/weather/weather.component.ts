@@ -9,9 +9,14 @@ import { WeatherService } from '../weather.service';
 export class WeatherComponent {
   city: string= ""; 
   weatherData: any; 
+  isFilled: boolean = false;
 
   constructor(private weatherService: WeatherService){}
-
+  checkValue() { 
+    if (this.city!="") {
+      this.isFilled=true; 
+    }
+  }
   getWeather() {
     this.weatherService.getWeather(this.city)
     .subscribe(data => { 

@@ -1,9 +1,7 @@
 :root{ 
-    --blue-1: #4040FF;
-    --blue-2: #0080FF;
-    --yellow-1: #FDDA0D;
+    --blue: #91cfec;
     --white: #FFF;
-    --grey-1: #EDEDED; 
+    --grey: #747474; 
     --shadow-dark: rgba(0,0,0,0.3); 
     --shadow-light: rgba(255,255,255,0.1);
 }
@@ -15,11 +13,13 @@
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-family: Verdana, Tahoma, sans-serif; 
     font-size: 16px; 
     width: 100%; 
     height: 100vh; 
-    background-color: var(--blue-1);
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    /* background: linear-gradient(89.2deg, rgb(191, 241, 236) 22.3%, rgb(109, 192, 236) 84.1%); */
+    /* background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);; */
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ body {
 .container{ 
     width: 400px; 
     height: 80vh; 
-    background-color: var(--blue-2);
+    background-color: var(--blue);
     border-radius: 20px; 
     box-shadow: 10px 10px 10px var(--shadow-dark)
 }
@@ -65,12 +65,13 @@ body {
 .location{ 
     color: var(--white); 
     text-align: center; 
-    font-size: 1.2em; 
+    font-size: 2em; 
+    font-weight: 300;
 }
 
 .temperature{ 
     color: var(--white); 
-    font-size: 4em; 
+    font-size: 3em; 
     text-align: center;
     font-weight:900;
 }
@@ -136,17 +137,43 @@ body {
 }
 
 .search-bar { 
-    margin-bottom: 1em; 
-    text-align: center; 
+    background-color: var(--blue);
+    margin-bottom: 5px; 
+    text-align: left;
+    border-radius: 20px;
+    /* height: 50px; */
+    /* margin-left: 20px; */
 }
 
-.search input { 
-    background-color: var(--shadow-light);
+.search-bar input { 
     border-radius: 20px; 
-    color: var(--grey-1);
     font-size: 0.8em;
     text-align: center; 
     border: none; 
     outline: none;
-    padding: 1em;
+    padding: 12px;
+    margin-left: 10px;
+    color: var(--white);
+}
+
+.search-bar button { 
+    background-color: var(--shadow-light);
+    font-size: 0.8em;
+    border-radius: 20px; 
+    text-align: center; 
+    border: none; 
+    outline: none;
+    padding: 10px 10px 10px 10px;
+    margin: 10px; 
+    padding: 12px;
+    color: var(--white)
+}
+
+.search-bar button:hover { 
+    background-color: var(--white);
+    color: var(--grey)
+}
+
+input[name="city"] {
+    color: var(--grey)
 }
