@@ -1,0 +1,72 @@
+<!-- <div> 
+    <h1>Weather Application</h1>
+    <form> 
+        <input type="text" name="cityName" placeholder="enter" [(ngModel)]="city">
+    </form>
+    <button type="button" (click)="getWeather()">get weather</button>
+    <h2>{{weatherData.name}}</h2>
+    <h2>Temperature: {{weatherData.main.temp}}</h2>
+</div> -->
+
+<div class="container"> 
+    <div class="upper-card"> 
+      <!-- <img src="../assets/test.jpeg"> 
+      <img src="../assets/test.jpeg">  -->
+        <div class="search-bar">
+        <form> 
+            <input type="text" name="cityName" placeholder="Search a City" [(ngModel)]="city">
+        </form>
+        <button type="button" (click)="getWeather()">Enter</button>
+        </div>
+      <div class="weather-data"> 
+        <div class="location">{{weatherData.name}}</div>x
+      </div>
+    </div>
+  
+    <div class="lower-card"> 
+      <div class="info-label">Weather Information</div>
+      <div class="info-container">
+        <div class="info-block">
+          <div class="info-block-label">
+            <!-- <img src="../assets/test.jpeg">  -->
+            <span>Min Temp</span>
+          </div>
+          <div class="info-value">
+            {{weatherData.main.temp_min}}
+          </div>
+        </div>
+  
+        <div class="info-block">
+          <div class="info-block-label">
+            <!-- <img src="../assets/test.jpeg">  -->
+            <span>Max Temp</span>
+          </div>
+          <div class="info-value">
+            {{weatherData.main.temp_max}}
+          </div>
+        </div>
+  
+        <div class="info-block">
+          <div class="info-block-label">
+            <!-- <img src="../assets/test.jpeg">  -->
+            <span>Humidity</span>
+          </div>
+          <div class="info-value">
+            {{weatherData.main.humidity}}
+          </div>
+        </div>
+  
+        <div class="info-block">
+          <div class="info-block-label">
+            <!-- <img src="../assets/test.jpeg">  -->
+            <span>Wind Speed</span>
+          </div>
+          <div class="info-value">
+            {{weatherData.wind.speed}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
