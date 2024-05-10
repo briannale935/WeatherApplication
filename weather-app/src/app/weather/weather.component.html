@@ -6,8 +6,8 @@
 </div>
 <div class="container"> 
     <div class="upper-card"> 
-      <img src="../assets/test.png"> 
-      <img src="../assets/test.png"> 
+      <img src="../assets/warm.png" *ngIf="weatherData.main.temp > 15"> 
+      <img src="../assets/cold.png" *ngIf="weatherData.main.temp <= 15"> 
       <div class="weather-data"> 
         <div class="location">{{weatherData.name}}</div>
         <div class="temperature">{{weatherData.main.temp | number: '1.0-0'}}°C</div>
@@ -19,8 +19,8 @@
       <div class="info-container">
         <div class="info-block">
           <div class="info-block-label">
-            <!-- <img src="../assets/test.jpeg">  -->
-            <span>Min Temp</span>
+            <img src="../assets/mintemp.png" class="image"> 
+            <span>Min Temp:</span>
           </div>
           <div class="info-value">
             {{weatherData.main.temp_min | number: '1.0-0'}}°C
@@ -29,8 +29,8 @@
   
         <div class="info-block">
           <div class="info-block-label">
-            <!-- <img src="../assets/test.jpeg">  -->
-            <span>Max Temp</span>
+            <img src="../assets/maxtemp.png" class="image"> 
+            <span>Max Temp:</span>
           </div>
           <div class="info-value">
             {{weatherData.main.temp_max | number: '1.0-0'}}°C
@@ -39,8 +39,8 @@
   
         <div class="info-block">
           <div class="info-block-label">
-            <!-- <img src="../assets/test.jpeg">  -->
-            <span>Humidity</span>
+            <img src="../assets/humid.png" class="image"> 
+            <span>Humidity:</span>
           </div>
           <div class="info-value">
             {{weatherData.main.humidity}}%
@@ -49,8 +49,8 @@
   
         <div class="info-block">
           <div class="info-block-label">
-            <!-- <img src="../assets/test.jpeg">  -->
-            <span>Wind Speed</span>
+            <img src="../assets/wind.png" class="image">
+            <span>Wind Speed:</span>
           </div>
           <div class="info-value">
             {{weatherData.wind.speed}}km/h
